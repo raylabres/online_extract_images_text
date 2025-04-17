@@ -1,0 +1,15 @@
+Web Scraping de Imagens para Aplicação de OCR e Análise
+
+Web scraping de imagens envolve a coleta automatizada de imagens disponíveis em páginas da web, para posterior aplicação de técnicas como OCR (Reconhecimento Óptico de Caracteres). O objetivo é extrair e analisar o conteúdo visual, principalmente textos embutidos em imagens, como capturas de avisos, gráficos, infográficos e outros elementos visuais que contenham informações textuais.
+
+Etapas Principais
+Coleta das Imagens: Utilizando ferramentas de scraping como BeautifulSoup e Selenium, é possível varrer sites em busca de URLs de imagens. Após encontrar as imagens desejadas, elas são baixadas automaticamente para um armazenamento local ou em nuvem.
+
+Aplicação de OCR: OCR, como o Tesseract, é aplicado para transformar os textos presentes nas imagens em dados editáveis e pesquisáveis. Essa técnica é especialmente útil para analisar infográficos, banners, avisos e outros conteúdos visuais que utilizam texto como meio de comunicação.
+
+Análise dos Dados Extraídos: Depois de converter o texto das imagens em formato digital, os dados podem ser processados para diversos fins, como análise de tendências, extração de informações contextuais, categorização ou mesmo automação de tarefas com base no conteúdo analisado.
+
+Desafios
+Qualidade da Imagem: Imagens de baixa resolução ou com ruído podem dificultar a extração de texto precisa.
+Formatação Complexa: Textos em imagens com formatações não lineares (como curvas ou blocos irregulares) podem afetar a precisão do OCR.
+Limitações Legais: Coletar imagens de websites pode esbarrar em questões de direitos autorais e privacidade.

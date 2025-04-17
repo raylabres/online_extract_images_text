@@ -1,0 +1,13 @@
+Converter imagem faz sentido
+Não faz sentido procurar por class (infografico, infografic, etc)
+Não faz sentido tratar muito a imagem visto que o conteúdo principal (texto), pode ser comprometido.
+Aumento de constraste 2.0, o máximo antes de perder a qualidade e ter ruído nos textos
+Utilizar OpenAI para validar se é útil
+Condensar todos os resultados em lista para otimizar custos
+Condensas os resultados saneados em json para otimizar custos
+Validar se é possível executar uma validação antes de tamanho de tokens (requisição)
+Gerar documento com imagem e informações
+Font utilizado por conta de codificação
+Programa utilizado para gtk runtime
+Tamanho imagem para menores que 100 e para maiores máximo 200
+Adicionado dimensões da imagem
