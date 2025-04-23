@@ -1,7 +1,7 @@
-# OCR Web Scraping e Tratamento de Imagens
+# Online Extract Images Text
 
 ## 📋 Descrição do Projeto
-Este script automatiza o fluxo completo de captura, conversão, tratamento e extração de texto de imagens presentes em páginas web utilizando técnicas de web scraping e OCR (Reconhecimento Óptico de Caracteres). Ideal para quem precisa coletar e processar grandes volumes de imagens contendo texto de forma programática.
+Este projeto de Iniciação Científica Online Extract Images Text, automatiza o fluxo completo de captura, conversão, tratamento e extração de texto de imagens presentes em páginas web utilizando técnicas de web scraping e OCR (Reconhecimento Óptico de Caracteres).
 
 ## ⚙️ Funcionalidades
 
@@ -15,13 +15,13 @@ Este script automatiza o fluxo completo de captura, conversão, tratamento e ext
 ## 📂 Estrutura de Diretórios
 
 ```
-├── 1_imagens_baixadas/       # Armazena as imagens originais baixadas
+├── 1_imagens_baixadas/      # Armazena as imagens originais baixadas
 ├── 2_imagens_convertidas/   # Imagens convertidas para PNG
 ├── 3_imagens_tratadas/      # Imagens com contraste aumentado
 ├── 4_resultados_ocr/        # Arquivos de texto gerados pelo OCR
 ├── 5_resultados_saneados/   # (Opcional) Resultados pós-saneamento
 ├── 6_documentos_gerados/    # Relatórios e documentos finais
-├── app.py                # Código-fonte principal
+├── app.py                   # Código-fonte principal
 └── README.md                # Este arquivo
 ```  
 
@@ -60,7 +60,7 @@ Este script automatiza o fluxo completo de captura, conversão, tratamento e ext
 
 No diretório raiz do projeto, execute:
 ```bash
-python script.py
+python app.py
 ```
 O script irá:
 1. Limpar pastas antigas.
@@ -71,7 +71,7 @@ O script irá:
 6. Gerar arquivos de texto em `4_resultados_ocr/`.
 
 ## 🔄 Personalização
-- **URL alvo**: altere a variável `site` no topo do `script.py`.
+- **URL alvo**: altere a variável `site` no topo do `app.py`.
 - **Ajuste de contraste**: modifique `fator_contraste` em `treat_image()`.
 - **Idiomas OCR**: configure `easyocr.Reader(['pt', 'en'])` conforme necessidade.
 
