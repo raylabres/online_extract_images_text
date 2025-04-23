@@ -12,7 +12,7 @@ import pytesseract
 import cairosvg
 
 # Variáveis úteis
-base_diretorio = f"{os.getcwd()}/2024_2025"
+base_diretorio = f"{os.getcwd()}"
 diretorio_imagens = f"{base_diretorio}/1_imagens_baixadas/"
 diretorio_convertidas = f"{base_diretorio}/2_imagens_convertidas/"
 diretorio_tratadas = f"{base_diretorio}/3_imagens_tratadas/"
