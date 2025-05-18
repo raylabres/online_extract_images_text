@@ -1,1 +1,5 @@
+<<<<<<< HEAD
  Palpites
+=======
+ 300002
+>>>>>>> 7069202 (Atualizando)

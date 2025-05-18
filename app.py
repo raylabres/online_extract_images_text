@@ -8,11 +8,14 @@ import os
 import easyocr
 from time import sleep
 from PIL import Image, ImageEnhance
-import pytesseract
 import cairosvg
 
 # Variáveis úteis
+<<<<<<< HEAD
 base_diretorio = f"{os.getcwd()}"
+=======
+base_diretorio = os.getcwd()
+>>>>>>> 7069202 (Atualizando)
 diretorio_imagens = f"{base_diretorio}/1_imagens_baixadas/"
 diretorio_convertidas = f"{base_diretorio}/2_imagens_convertidas/"
 diretorio_tratadas = f"{base_diretorio}/3_imagens_tratadas/"
@@ -110,7 +113,6 @@ def treat_image():
     
 # Web Scraping
 site = "https://brasilescola.uol.com.br/redacao/genero-textual-infografico.htm#:~:text=O%20infogr%C3%A1fico%20%C3%A9%20uma%20uni%C3%A3o,de%20publicidade%20e%20no%20jornalismo"
-#site = "https://www.mercadolivre.com.br/"
 
 resposta = requests.get(site)
 if resposta.status_code == 200:
@@ -156,7 +158,7 @@ convert_image_svg()
 # Tratando as imagens
 treat_image()
 
-#Aplicando OCR\
+#Aplicando OCR
 arquivos = os.listdir(diretorio_tratadas)
 arquivos = sorted(arquivos, key=lambda x: int(x.split('.')[0]))
 leitor = easyocr.Reader(['pt']) #leitor com os idiomas desejados
