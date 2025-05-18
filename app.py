@@ -11,11 +11,7 @@ from PIL import Image, ImageEnhance
 import cairosvg
 
 # Variáveis úteis
-<<<<<<< HEAD
-base_diretorio = f"{os.getcwd()}"
-=======
 base_diretorio = os.getcwd()
->>>>>>> 7069202 (Atualizando)
 diretorio_imagens = f"{base_diretorio}/1_imagens_baixadas/"
 diretorio_convertidas = f"{base_diretorio}/2_imagens_convertidas/"
 diretorio_tratadas = f"{base_diretorio}/3_imagens_tratadas/"
