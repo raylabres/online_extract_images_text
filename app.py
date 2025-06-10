@@ -106,7 +106,6 @@ def treat_image():
 
     return None
     
-    
 # Web Scraping
 site = "https://brasilescola.uol.com.br/redacao/genero-textual-infografico.htm#:~:text=O%20infogr%C3%A1fico%20%C3%A9%20uma%20uni%C3%A3o,de%20publicidade%20e%20no%20jornalismo"
 

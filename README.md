@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="online_extract_images_text.png" alt="Online Extract Images Text" width="300"/>
+</p>
+
 # Online Extract Images Text
 
 ## 📋 Descrição do Projeto

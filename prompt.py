@@ -31,7 +31,6 @@ prompt_utilidades += "\nRetorne o resultado como uma lista em Python, por exempl
 #print(prompt_utilidades)
 resposta_gpt_utilidade = ['SIM', 'SIM', 'NÃO', 'SIM', 'NÃO', 'NÃO', 'NÃO', 'NÃO', 'NÃO', 'NÃO', 'NÃO']
 
-
 # Obtendo indíces para filtrar
 indices = list()
 for pos, resposta in enumerate(resposta_gpt_utilidade):
