@@ -152,6 +152,10 @@ O sistema gera três tipos principais de saída:
    - Dimensões da imagem
    - Metadados do processamento
 
+📎 **Exemplo de resultado gerado**:  
+Veja um exemplo real de saída do sistema no arquivo [`exemplo_resultado.pdf`](./exemplo_resultado.pdf), localizado na raiz do projeto.  
+Este arquivo ilustra o conteúdo final com todos os elementos inseridos automaticamente.
+
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Para colaborar:
