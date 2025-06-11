@@ -9,6 +9,11 @@ import easyocr
 from time import sleep
 from PIL import Image, ImageEnhance
 import cairosvg
+import prompt
+
+
+# SITE
+site = "https://brasilescola.uol.com.br/redacao/genero-textual-infografico.htm#:~:text=O%20infogr%C3%A1fico%20%C3%A9%20uma%20uni%C3%A3o,de%20publicidade%20e%20no%20jornalismo"
 
 # Variáveis úteis
 base_diretorio = os.getcwd()
@@ -38,6 +43,7 @@ apagar_antigos_arquivos(diretorio_tratadas)
 apagar_antigos_arquivos(diretorio_resultados)
 apagar_antigos_arquivos(diretorio_saneamentos)
 apagar_antigos_arquivos(diretorio_documentos)
+print("Arquivos antigos apagados com sucesso!")
 
 # Funções úteis
 def convert_image_pillow():
@@ -57,6 +63,7 @@ def convert_image_pillow():
             if tipo_arquivo in pillow_supported_extensions:
                 img = Image.open(caminho_arquivo)
                 img.save(caminho_arquivo_convertido, format="PNG")
+        print("Imagens gerais convertidas com sucesso!")
     except Exception as erro:
         erro = erro
         print(f"Não foi possível converter imagem para PNG, erro: {erro}")
@@ -80,6 +87,7 @@ def convert_image_svg():
             caminho_arquivo_convertido = f"{diretorio_convertidas}{nome_arquivo}.png"
             if tipo_arquivo in cairo_svg_supported_extensions:
                 cairosvg.svg2png(url=caminho_arquivo, write_to=caminho_arquivo_convertido)
+        print("Imagens SVG convertidas com sucesso!")
     except Exception as erro:
         erro = erro
         print(f"Não foi possível converter imagem para PNG, erro: {erro}")
@@ -103,12 +111,11 @@ def treat_image():
             enhancer = ImageEnhance.Contrast(imagem)
             image_with_contrast = enhancer.enhance(fator_contraste)
             image_with_contrast.save(f"{diretorio_tratadas}/{arquivo}")
+    print("Imagens tratadas com sucesso!")
 
     return None
     
 # Web Scraping
-site = "https://brasilescola.uol.com.br/redacao/genero-textual-infografico.htm#:~:text=O%20infogr%C3%A1fico%20%C3%A9%20uma%20uni%C3%A3o,de%20publicidade%20e%20no%20jornalismo"
-
 resposta = requests.get(site)
 if resposta.status_code == 200:
     conteudo = BeautifulSoup(resposta.text, "html.parser")
@@ -145,6 +152,7 @@ for pos, arquivo in enumerate(arquivos):
     caminho_arquivo = os.path.join(diretorio_imagens, arquivo)
     if tipo_arquivo not in pillow_supported_extensions and tipo_arquivo not in cairo_svg_supported_extensions:
         os.remove(caminho_arquivo)
+print("Arquivos que não são imagens foram removidos com sucesso!")
 
 # Converter imagens para PNG
 convert_image_pillow()
@@ -172,7 +180,6 @@ for pos, arquivo in enumerate(arquivos):
                 resultados += f" {valor[1]}"
             
             if len(resultados) >= 1: # Verificando se o arquivo tem texto
-                print(resultados)
                 tipo_arquivo = str(arquivo).split(".")
                 tipo_arquivo = tipo_arquivo[-1]
                 with open(f"{diretorio_resultados}/{str(arquivo).replace(f'.{tipo_arquivo}', '.txt')}", "w", encoding="utf-8") as arquivo_txt:
@@ -185,3 +192,10 @@ for pos, arquivo in enumerate(arquivos):
             print(f"Erro no processamento: {erro}")
     else:
         os.remove(caminho_arquivo)
+print("OCR aplicado com sucesso!")
+
+# Gerando documentos com os resultados pelo prompt.py
+prompt.main()
+
+if __name__ == "__main__":
+    print("Processamento concluído com sucesso!")

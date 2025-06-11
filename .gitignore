@@ -1,2 +1,4 @@
 venv/
 credenciais/
+__pycache__/
+relatorio/
